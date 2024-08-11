@@ -6,7 +6,7 @@ export default function About() {
     <div className="min-h-screen bg-background text-foreground">
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-6">About Me</h1>
-        
+
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Personal Interests</h2>
           <div className="flex items-center mb-2">
@@ -27,14 +27,14 @@ export default function About() {
         <section>
           <h2 className="text-2xl font-semibold mb-4">Why Software Development?</h2>
           <p className="mb-4">
-            My journey into software development began when a friend opened my eyes to the possibilities in the tech industry. 
-            Despite not having a traditional IT background, I discovered that with dedication and the right training, I could 
+            My journey into software development began when a friend opened my eyes to the possibilities in the tech industry.
+            Despite not having a traditional IT background, I discovered that with dedication and the right training, I could
             build a career in this dynamic field.
           </p>
           <p>
-            After completing an intensive 3.5-month bootcamp at TechUp, I successfully transitioned into a role as a 
-            full-stack developer at Gosoft (CP ALL). This experience has reinforced my belief in the power of continuous 
-            learning and adaptability in today's rapidly evolving job market.
+            After completing an intensive 3.5-month bootcamp at TechUp, I successfully transitioned into a role as a
+            full-stack developer at Gosoft (CP ALL). This experience has reinforced my belief in the power of continuous
+            learning and adaptability in today&apos;s rapidly evolving job market.
           </p>
         </section>
       </main>
@@ -42,7 +42,7 @@ export default function About() {
   );
 }
 
-const TimelineItem = ({ icon, title, description }) => (
+const TimelineItem = ({ icon, title, description }: any) => (
   <div className="flex mb-4">
     <div className="flex flex-col items-center mr-4">
       <div className="rounded-full bg-primary text-primary-foreground p-2">

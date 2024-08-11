@@ -88,7 +88,7 @@ export default function Home() {
   );
 }
 
-const SkillCard = ({ icon, title, skills }) => (
+const SkillCard = ({ icon, title, skills }: any) => (
   <motion.div
     className="p-4 border rounded-lg shadow-sm"
     variants={fadeInUp}
@@ -101,7 +101,7 @@ const SkillCard = ({ icon, title, skills }) => (
       <h3 className="text-xl font-semibold ml-2">{title}</h3>
     </div>
     <ul className="grid grid-cols-2 gap-2">
-      {skills.map((skill, index) => (
+      {skills.map((skill: any, index: any) => (
         <motion.li
           key={index}
           className="flex items-center"
@@ -116,7 +116,7 @@ const SkillCard = ({ icon, title, skills }) => (
   </motion.div>
 );
 
-const CertificationCard = ({ icon, title, org }) => (
+const CertificationCard = ({ icon, title, org }: any) => (
   <motion.div
     className="p-4 border rounded-lg shadow-sm flex items-center"
     variants={fadeInUp}

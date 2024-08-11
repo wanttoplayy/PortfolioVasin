@@ -83,7 +83,7 @@ export default function Experience() {
   );
 }
 
-const ExperienceItem = ({ title, company, period, description, skills }) => {
+const ExperienceItem = ({ title, company, period, description, skills }: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -106,13 +106,13 @@ const ExperienceItem = ({ title, company, period, description, skills }) => {
           className="overflow-hidden"
         >
           <ul className="list-disc list-inside space-y-1 text-foreground mb-4">
-            {description.map((item, index) => (
+            {description.map((item: any, index: any) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
           {skills && skills.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-4">
-              {skills.map((skill, index) => (
+              {skills.map((skill: any, index: any) => (
                 <span key={index} className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm">
                   {skill}
                 </span>
@@ -141,7 +141,7 @@ const ExperienceItem = ({ title, company, period, description, skills }) => {
   );
 };
 
-const EducationItem = ({ degree, institution, period }) => (
+const EducationItem = ({ degree, institution, period }: any) => (
   <ScrollAnimation>
     <div className="border-l-4 border-secondary pl-4 py-2 bg-secondary/5 rounded hover:bg-secondary/10 transition-colors duration-300">
       <h3 className="text-xl font-semibold text-foreground">{degree}</h3>

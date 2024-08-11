@@ -7,21 +7,21 @@ import { Textarea } from '@/components/ui/textarea';
 export default function Contact() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-   
+
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-6">Contact Me</h1>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
-            <ContactInfo 
+            <ContactInfo
               email="bestwasin1617@gmail.com"
               phone="+66 837575999"
               linkedin="https://www.linkedin.com/in/vasin-suksuchit/"
               github="https://github.com/wanttoplayy"
             />
           </div>
-          
+
           <div>
             <h2 className="text-2xl font-semibold mb-4">Send a Message</h2>
             <ContactForm />
@@ -32,7 +32,7 @@ export default function Contact() {
   );
 }
 
-const ContactInfo = ({ email, phone, linkedin, github }) => (
+const ContactInfo = ({ email, phone, linkedin, github }: any) => (
   <div className="space-y-4">
     <div className="flex items-center">
       <Mail className="mr-2" />
