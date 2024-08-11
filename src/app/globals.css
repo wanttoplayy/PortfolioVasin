@@ -67,3 +67,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+:root {
+  --header-height: 20px;
+}
+
+html, body {
+  padding-top: var(--header-height);
+}

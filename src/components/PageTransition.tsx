@@ -9,7 +9,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 };
 
-const PageTransition = ({ children }:any) => {
+const PageTransition = ({ children }: any) => {
   const pathname = usePathname();
 
   return (
@@ -21,7 +21,7 @@ const PageTransition = ({ children }:any) => {
         animate="enter"
         exit="exit"
         transition={{ type: 'linear' }}
-        className="min-h-screen"
+        className="min-h-screen pt-[var(--header-height)]"
       >
         {children}
       </motion.div>
