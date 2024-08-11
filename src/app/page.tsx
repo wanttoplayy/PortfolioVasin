@@ -12,6 +12,7 @@ import {
   SiAzuredevops, SiCypress
 } from 'react-icons/si';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -79,7 +80,7 @@ export default function Home() {
             variants={staggerChildren}
           >
             <CertificationCard icon={<FaAws size={24} className="text-orange-400" />} title="AWS Cloud Practitioner" />
-            <CertificationCard icon={<SiAzuredevops size={24} className="text-blue-500" />} title="Azure Fundamentals" />
+            <CertificationCard icon={<SiAzuredevops size={24} className="text-blue-500" />} title="Azure Fundamentals" href="https://learn.microsoft.com/en-us/users/vasinsuksuchit-7780/credentials/5ed8c0c83c2e3aec?ref=https%3A%2F%2Fwww.linkedin.com%2F" />
             <CertificationCard icon={<GraduationCap size={24} />} title="Full-Stack Software Development Bootcamp" org="TechUp" />
           </motion.div>
         </motion.section>
@@ -116,18 +117,26 @@ const SkillCard = ({ icon, title, skills }: any) => (
   </motion.div>
 );
 
-const CertificationCard = ({ icon, title, org }: any) => (
-  <motion.div
-    className="p-4 border rounded-lg shadow-sm flex items-center"
-    variants={fadeInUp}
-    whileHover="hover"
-    whileTap="tap"
-    {...hoverScale}
-  >
-    {icon}
-    <div className="ml-4">
-      <h3 className="text-lg font-semibold">{title}</h3>
-      {org && <p className="text-sm text-gray-600">{org}</p>}
-    </div>
-  </motion.div>
-);
+const CertificationCard = ({ icon, title, org, href }: any) => {
+  const CardContent = (
+    <motion.div
+      className="p-4 border rounded-lg shadow-sm flex items-center"
+      variants={fadeInUp}
+      whileHover="hover"
+      whileTap="tap"
+      {...hoverScale}
+    >
+      {icon}
+      <div className="ml-4">
+        <h3 className="text-lg font-semibold">{title}</h3>
+        {org && <p className="text-sm text-gray-600">{org}</p>}
+      </div>
+    </motion.div>
+  );
+
+  return href ? (
+    <Link href={href} target="_blank" rel="noopener noreferrer">
+      {CardContent}
+    </Link>
+  ) : CardContent;
+};
